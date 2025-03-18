@@ -1,2 +1,11 @@
-<h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
+<h1> Showing Cars</h1>
+
+<h1><%= @car[:name] %></h1>
+
+<p>By: <%= @car[:name] %></p>
+<p><%= @car[:year] %></p>
+
+<%= link_to 'Return to cars', cars_path %>
+<br>
+<%= link_to 'edit', @car, method: :edit, data: { confirm: 'are you sure'} %>
+
