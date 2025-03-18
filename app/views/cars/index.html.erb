@@ -1,0 +1,17 @@
+<h1>Cars</h1>
+<h2> All cars listed below: </h2>
+
+<% if @cars.any? %>
+  <% @cars.each do |car| %>
+    <div class="car">
+      <h2><%= link_to car[:name], car_path(car[:id]) %></h2>
+      <p>By: <%= car[:name] %></p>
+      <p><%= car[:year] %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>No Cars.</p>
+<% end %>
+
+<p> End of Cars index. </p>
+
